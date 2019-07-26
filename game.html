@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+    </head>
+
+    <body>
+        <script>
+            function computerPlay() {
+                x = Math.floor(Math.random() * (3) + 1)
+                if (x == 1) {
+                    return Rock;
+                } else if (x == 2) {
+                    return Paper;
+                } else {
+                    return Scissors
+                }
+            }
+
+            function playRound(playerSelection, computerSelection) {
+                if (/playerSelection/i == /computerSelection/i) {
+                    return ("Draw! " + playerSelection.toString() + " and " + computerSelection.toString() + " are the same.");
+                } else {
+                switch(playerSelection) {
+                    case (/playerSelection/i == Rock):
+                        if (/computerSelection/i == Scissors) {
+                        return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
+                    } else {
+                        return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
+                    }
+                    case (/playerSelection/i == Scissors):
+                        if (/computerSelection/i == Paper) {
+                        return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
+                    } else {
+                        return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
+                    }
+                    case (/playerSelection/i == Paper):
+                        if (/computerSelection/i == Rock) {
+                            return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
+                    } else {
+                        return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
+                    }
+                } 
+                }
+            }
+
+            
+
+            function game() {
+                var playerSelection = prompt("Please choose Paper, Rock or Scissors")
+                while (playerSelection != /Paper/i || /Rock/i || /Scissors/i) {
+                    var playerSelection = prompt("Wrong choice, please choose Paper, Rock or Scissors")
+                }
+                for (i = 0; i <5; i++) {
+                    const computerSelection = computerPlay()
+                    console.log(playRound(playerSelection, computerSelection))
+                    function playRound(playerSelection, computerSelection) {
+                    if (/playerSelection/i == /computerSelection/i) {
+                        return ("Draw! " + playerSelection.toString() + " and " + computerSelection.toString() + " are the same.");
+                    } else {
+                    switch(playerSelection) {
+                        case (/playerSelection/i == Rock):
+                            if (/computerSelection/i == Scissors) {
+                            return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
+                        } else {
+                            return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
+                        }
+                        case (/playerSelection/i == Scissors):
+                            if (/computerSelection/i == Paper) {
+                            return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
+                        } else {
+                            return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
+                        }
+                        case (/playerSelection/i == Paper):
+                            if (/computerSelection/i == Rock) {
+                                return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
+                        } else {
+                            return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
+                        }
+                        } 
+                        }
+                        }
+                }
+            }
+        </script>
+    </body>
+</html>
