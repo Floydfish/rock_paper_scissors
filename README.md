@@ -1,5 +1,5 @@
 # rock_paper_scissors
-This repository is part of the learning at [The Odin Project](https://www.theodinproject.com/)
+This repository is part of my learning JavaScript path at [The Odin Project](https://www.theodinproject.com/)
 
 # Web Development 101
 ## PROJECT: ROCK PAPER SCISSORS
