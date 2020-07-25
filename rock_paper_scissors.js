@@ -8,11 +8,11 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (/playerSelection/i == /computerSelection/i) {
-        return ("Draw! " + playerSelection.toString() + " and " + computerSelection.toString() + " are the same.");
+    if (playerSelection === computerSelection) {
+        return (`Draw! Both players chose ${playerSelection}`);
     } else {
     switch(playerSelection) {
-        case (/playerSelection/i == Rock):
+        case (playerSelection === "rock"): // Stoped here
             if (/computerSelection/i == Scissors) {
             return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
         } else {
@@ -35,13 +35,9 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    var playerSelection = prompt("Please choose Paper, Rock or Scissors")
-    console.log(playerSelection)
-    var selection = playerSelection.toLowerCase()
-    console.log(selection)
-    while (selection != "rock" && selection != "paper" && selection != "scissors" ) {
-        var playerSelection = prompt("Wrong choice, please choose Paper, Rock or Scissors")
-        var selection = playerSelection.toLowerCase()
+    let playerSelection = prompt("Please choose Paper, Rock or Scissors").toLowerCase
+    while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors" ) {
+        playerSelection = prompt("Wrong choice, please choose Paper, Rock or Scissors").toLowerCase
     }
     for (i = 0; i <5; i++) {
         const computerSelection = computerPlay()
