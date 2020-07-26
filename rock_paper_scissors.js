@@ -17,20 +17,26 @@ function playRound(playerSelection, computerSelection) {
         switch(playerSelection) {
             case ("rock"): 
                 if (computerSelection === "scissors") {
+                    gameScore.playerScore++
                     return win;
                 } else {
+                    gameScore.computerScore++
                     return lose;
                 }
             case ("scissors"):
                 if (computerSelection === "paper") {
+                    gameScore.playerScore++
                     return win;
                 } else {
+                    gameScore.computerScore++
                     return lose;
             }
             case ("paper"):
                 if (computerSelection === "rock") {
+                    gameScore.playerScore++
                     return win;
                 } else {
+                    gameScore.computerScore++
                     return lose;
             }
         } 
@@ -45,5 +51,8 @@ function game() {
         }
         const computerSelection = computerPlay()
         console.log(playRound(playerSelection, computerSelection))
+        console.log(gameScore)
     }
 }
+
+let gameScore = {playerScore: 0, computerScore: 0}
