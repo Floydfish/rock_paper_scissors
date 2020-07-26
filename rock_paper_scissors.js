@@ -8,65 +8,42 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    let win = `You win! ${playerSelection} beats ${computerSelection}!`;;
+    let lose = `You lose! ${computerSelection}! beats ${playerSelection}!`;
+    let draw = `Draw! Both players chose ${playerSelection}`;
     if (playerSelection === computerSelection) {
-        return (`Draw! Both players chose ${playerSelection}`);
+        return draw;
     } else {
-    switch(playerSelection) {
-        case (playerSelection === "rock"): // Stoped here
-            if (/computerSelection/i == Scissors) {
-            return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
-        } else {
-            return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
-        }
-        case (/playerSelection/i == Scissors):
-            if (/computerSelection/i == Paper) {
-            return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
-        } else {
-            return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
-        }
-        case (/playerSelection/i == Paper):
-            if (/computerSelection/i == Rock) {
-                return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
-        } else {
-            return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
-        }
-    } 
+        switch(playerSelection) {
+            case ("rock"): 
+                if (computerSelection === "scissors") {
+                    return win;
+                } else {
+                    return lose;
+                }
+            case ("scissors"):
+                if (computerSelection === "paper") {
+                    return win;
+                } else {
+                    return lose;
+            }
+            case ("paper"):
+                if (computerSelection === "rock") {
+                    return win;
+                } else {
+                    return lose;
+            }
+        } 
     }
 }
 
 function game() {
-    let playerSelection = prompt("Please choose Paper, Rock or Scissors").toLowerCase
-    while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors" ) {
-        playerSelection = prompt("Wrong choice, please choose Paper, Rock or Scissors").toLowerCase
-    }
     for (i = 0; i <5; i++) {
+        let playerSelection = prompt("Please choose Paper, Rock or Scissors").toLowerCase();
+        while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors" ) {
+            playerSelection = prompt("Wrong choice, please choose Paper, Rock or Scissors").toLowerCase();
+        }
         const computerSelection = computerPlay()
-        //console.log(playRound(playerSelection, computerSelection))
-        function playRound(selection, computerSelection) {
-        if (Selection == computerSelection) {
-            return ("Draw! " + selection + " and " + computerSelection + " are the same.");
-        } else {
-        switch(selection) {
-            case (selection == "rock"):
-                if (computerSelection == "scissors") {
-                return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
-            } else {
-                return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
-            }
-            case (selection == "scissors"):
-                if (computerSelection == "paper") {
-                return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
-            } else {
-                return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
-            }
-            case (selection == "paper"):
-                if (computerSelection == "rock") {
-                    return ("You win! " + playerSelection.toString() + " beats " + computerSelection.toString() + "!")
-            } else {
-                return ("You lose! " + computerSelection.toString() + " beats " + playerSelection.toString() + "!")
-            }
-            } 
-            }
-            }
+        console.log(playRound(playerSelection, computerSelection))
     }
 }
