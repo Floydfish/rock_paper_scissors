@@ -43,12 +43,17 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function playerPlay() {
+    let play = prompt("Please choose Paper, Rock or Scissors").toLowerCase();
+    while (play != "rock" && play != "paper" && play != "scissors") {
+        play = prompt("Wrong choice, please choose Paper, Rock or Scissors").toLowerCase();
+    }
+    return play
+}
+
 function game() {
     for (i = 0; i < 5; i++) {
-        let playerSelection = prompt("Please choose Paper, Rock or Scissors").toLowerCase();
-        while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors" ) {
-            playerSelection = prompt("Wrong choice, please choose Paper, Rock or Scissors").toLowerCase();
-        }
+        const playerSelection = playerPlay()
         const computerSelection = computerPlay()
         console.log(playRound(playerSelection, computerSelection))
         console.log(gameScore)
