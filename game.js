@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (i = 0; i <5; i++) {
+    for (i = 0; i < 5; i++) {
         let playerSelection = prompt("Please choose Paper, Rock or Scissors").toLowerCase();
         while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors" ) {
             playerSelection = prompt("Wrong choice, please choose Paper, Rock or Scissors").toLowerCase();
