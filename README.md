@@ -1,5 +1,6 @@
-# rock_paper_scissors
-This repository is part of my learning JavaScript path at [The Odin Project](https://www.theodinproject.com/)
+*This repository is part of the [Foundations](https://www.theodinproject.com/courses/foundations) at* [The Odin Project](https://www.theodinproject.com/)
+
+***
 
 # Web Development 101
 ## PROJECT: ROCK PAPER SCISSORS
@@ -8,7 +9,7 @@ This repository is part of my learning JavaScript path at [The Odin Project](htt
 
 We’re going to make a simple implementation of grade-school classic “rock paper 
 scissors”. If you don’t know what that is check the 
-[wikipedia article](https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors) 
+[Wikipedia article](https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors) 
 or [this](https://www.wikihow.com/Play-Rock,-Paper,-Scissors) 
 ridiculous step-by-step. For the moment we’re just going to play the game from 
 the browser console, but we will revisit it and add a front end later so don’t 
