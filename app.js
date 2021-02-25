@@ -3,8 +3,15 @@ const playerScore = document.querySelector('#playerScore');
 const computerScore = document.querySelector('#computerScore');
 const description = document.querySelector('.description p')
 const winScore = document.querySelector('#winScore')
+const weapons = document.querySelectorAll('.weapon')
 
+weapons.forEach(weapon => weapon.addEventListener('click', playRound))
 let winScoreValue = Number(winScore.value);
+winScore.addEventListener('change', () => {
+	winScoreValue = Number(winScore.value)
+	reset();
+})
+
 let keepPlaying = true
 
 function computerPlay() {
@@ -86,5 +93,16 @@ function draw() {
 	description.innerText = `You chose the same weapon, DRAW`
 }
 
-const weapons = document.querySelectorAll('.weapon')
-weapons.forEach(weapon => weapon.addEventListener('click', playRound))
+function reset() {
+	Object.keys(gameScore).forEach(key => {
+		gameScore[key] = 0;
+	});
+	playerScore.innerText = gameScore.playerScore;
+	playerScore.classList.remove('green');
+	playerScore.classList.remove('red');
+	computerScore.classList.remove('green');
+	computerScore.classList.remove('red');
+	computerScore.innerText = gameScore.computerScore;
+	keepPlaying = true
+}
+
