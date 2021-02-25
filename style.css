@@ -1,29 +1,74 @@
 body {
-    background-color: #2F4F4F;
+	height: 100vh;
+	margin: 0;
+	display: grid;
+	background-color: #000;
 }
 
 h1 {
-    text-align: center;
+	font-family: 'Amatic SC', cursive;
+	color: #d90429;
 }
 
 h2 {
-    text-align: center;
-    font-family: 'Amatic SC', cursive;
-    color: red;
-    font-size: x-large;
+	color: #ffebcd;
 }
 
-#rock {
+h3 {
+	color: #ffebcd;
+}
+
+footer {
+	margin-top: auto;
+}
+
+img {
+	width: 75%;
+	margin-top: 0.5em;
+}
+
+figure {
+	margin: 1em;
+}
+
+figcaption {
+	font-size: 2em;
+	margin: 0.5em;
+}
+
+.wrap {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    background-color: #14213d;
+    width: 100vw;
+}
+
+.weapons {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: column;
+    width: 75vw;
+}
+
+.weapon {
+    width: 25vw;
+    background-color: white;
+    border: .2em solid black;
+}
+
+#cpt-rock {
     font-family: 'Flavors', cursive;
     color:brown;
 }
 
-#paper {
+#cpt-paper {
     font-family: 'Stick', sans-serif;
-    color: #FFFFF0;
+    color: #fca311;
 }
 
-#scissors {
+#cpt-scissors {
     font-family: 'New Rocker', cursive;
-    color:	#C0C0C0;
+    color:	#b7b7a4;
 }
