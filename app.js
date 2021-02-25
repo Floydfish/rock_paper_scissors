@@ -4,6 +4,9 @@ const computerScore = document.querySelector('#computerScore');
 const description = document.querySelector('.description p')
 const winScore = document.querySelector('#winScore')
 const weapons = document.querySelectorAll('.weapon')
+const resetBtn = document.querySelector('.reset')
+
+resetBtn.addEventListener('click', reset);
 
 weapons.forEach(weapon => weapon.addEventListener('click', playRound))
 let winScoreValue = Number(winScore.value);
