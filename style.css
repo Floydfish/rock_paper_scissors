@@ -1,0 +1,165 @@
+body {
+	min-height: 100vh;
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 3fr auto;
+	align-items: center;
+	background-color: #000;
+}
+
+header {
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Amatic SC', cursive;
+	color: #fbc4ab;
+}
+
+h2 {
+	color: #ffebcd;
+}
+
+h3 {
+	color: #ffebcd;
+}
+
+footer {
+	color: #ffebcd;
+	background-color: #14213d;
+	padding: 1em;
+	margin: 0;
+}
+
+img {
+	width: 75%;
+	margin-top: 0.5em;
+}
+
+figure {
+	margin: 1em;
+}
+
+figure:hover {
+	background-color: red;
+  margin: 0.5em;
+  box-shadow: 0 1em 2em rgb(255, 255, 255);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+figure:active {
+    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+    transform: scale(.98);
+	}
+
+figcaption {
+	font-size: 2em;
+	margin: 0.5em;
+}
+
+input[type='number'] {
+	display: inline;
+	background-color: #14213d;
+	color: white;
+	margin: 1em;
+	text-align: center;
+}
+
+.wrap {
+	text-align: center;
+	display: grid;
+	justify-content: center;
+	background-color: #14213d;
+	width: 100vw;
+	padding: 0.5em 0;
+}
+
+.weapons {
+	display: grid;
+	justify-content: center;
+	grid-auto-flow: column;
+	width: 75vw;
+}
+
+.weapon {
+	width: 25vw;
+	background-color: white;
+	border: .2em solid black;
+}
+
+.scores div{
+	display: inline;
+	font-size: 2em;
+	margin: 2em;
+	color: blanchedalmond;
+}
+.scores div span {
+	margin: 1em;
+}
+
+.description {
+	height: 10vh;
+	color:rgb(255, 255, 255);
+	padding-top: 5vh;
+	font-size: 2em;
+}
+
+.green {
+	color: greenyellow;
+}
+
+.red {
+	color: red;
+}
+
+.reset {
+	background-color: teal;
+	color: thistle;
+}
+
+.btn-reset {
+	margin: 0;
+}
+
+#cpt-rock {
+	font-family: 'Flavors', cursive;
+	color:brown;
+}
+
+#cpt-paper {
+	font-family: 'Stick', sans-serif;
+	color: #fca311;
+}
+
+#cpt-scissors {
+	font-family: 'New Rocker', cursive;
+	color:	#b7b7a4;
+}
+
+@media screen and (max-width: 768px) {
+	figure {
+		margin: 0.75em;
+	}
+	
+	figcaption {
+		font-size: 1.1em;
+	}
+	
+	footer {
+		font-size: 0.5em;
+	}
+
+	.description {
+		padding-top: 2vh;
+		font-size: 1em;
+	}
+	.scores div {
+		font-size: 1.5em;
+		margin: 0.5em;
+	}
+
+	.scores div span {
+		margin: 0.5em;
+	}
+	
+}
