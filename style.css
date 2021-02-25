@@ -79,6 +79,12 @@ figcaption {
 	margin: 1em;
 }
 
+.description {
+	height: 15vh;
+	color:rgb(255, 255, 255);
+	margin-top: 1em;
+}
+
 #cpt-rock {
 	font-family: 'Flavors', cursive;
 	color:brown;
