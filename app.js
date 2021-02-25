@@ -2,8 +2,9 @@ const gameScore = { playerScore: 0, computerScore: 0 };
 const playerScore = document.querySelector('#playerScore');
 const computerScore = document.querySelector('#computerScore');
 const description = document.querySelector('.description p')
+const winScore = document.querySelector('#winScore')
 
-let winScore = 5
+let winScoreValue = Number(winScore.value);
 let keepPlaying = true
 
 function computerPlay() {
@@ -27,8 +28,15 @@ function playRound() {
 	if (keepPlaying) {
 		checkWin(playerSelection, computerSelection)
 	} 
-	if (gameScore.playerScore === winScore || gameScore.computerScore === winScore) {
+	if (gameScore.playerScore === winScoreValue || gameScore.computerScore === winScoreValue) {
 		keepPlaying = false
+	}
+	if (gameScore.playerScore === winScoreValue) {
+		playerScore.classList.add('green');
+		computerScore.classList.add('red');
+	} else if (gameScore.computerScore === winScoreValue) {
+		playerScore.classList.add('red');
+		computerScore.classList.add('green');
 	}
 }
 
