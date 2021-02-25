@@ -3,6 +3,9 @@ const playerScore = document.querySelector('#playerScore');
 const computerScore = document.querySelector('#computerScore');
 const description = document.querySelector('.description p')
 
+let winScore = 5
+let keepPlaying = true
+
 function computerPlay() {
 	let x = Math.floor(Math.random() * (3))
 	switch (x) {
@@ -12,10 +15,21 @@ function computerPlay() {
 	}
 }
 
+function runGame() {
+	while (keepPlaying) {
+		playRound();
+	}
+}
+
 function playRound() {
 	computerSelection = computerPlay()
 	playerSelection = this.innerText.toLowerCase();
-	checkWin(playerSelection, computerSelection)
+	if (keepPlaying) {
+		checkWin(playerSelection, computerSelection)
+	} 
+	if (gameScore.playerScore === winScore || gameScore.computerScore === winScore) {
+		keepPlaying = false
+	}
 }
 
 function checkWin(playerSelection, computerSelection) {
@@ -25,41 +39,39 @@ function checkWin(playerSelection, computerSelection) {
 		switch (playerSelection) {
 			case ("rock"):
 				if (computerSelection === "scissors") {
-					win();
+					winRound();
 				} else {
-					lose();
+					loseRound();
 				}
 				break;
 			case ("scissors"):
 				if (computerSelection === "paper") {
-					win();
+					winRound();
 				} else {
-					lose();
+					loseRound();
 				}
 				break;
 			case ("paper"):
 				if (computerSelection === "rock") {
-					win();
+					winRound();
 				} else {
-					lose();
+					loseRound();
 				}
 				break;
 		}
 	}
 }
 
-function win() {
+function winRound() {
 	gameScore.playerScore++;
 	playerScore.innerText = gameScore.playerScore
 	description.innerText = `${playerSelection} beats ${computerSelection}, YOU WIN!`
-	console.log(gameScore);
 }
 
-function lose() {
+function loseRound() {
 	gameScore.computerScore++
 	computerScore.innerText = gameScore.computerScore
 	description.innerText = `${computerSelection} beats ${playerSelection}, you lose`
-	console.log(gameScore);
 }
 
 function draw() {

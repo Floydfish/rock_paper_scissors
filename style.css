@@ -52,6 +52,13 @@ figcaption {
 	margin: 0.5em;
 }
 
+input[type='number'] {
+	display: inline;
+	background-color: #14213d;
+	color: white;
+	margin: 1em;
+}
+
 .wrap {
 	text-align: center;
 	display: grid;
@@ -91,8 +98,12 @@ figcaption {
 	padding-top: 7vh;
 }
 
-.blue {
-	background-color: blue;
+.green {
+	color: greenyellow;
+}
+
+.red {
+	color: red;
 }
 
 #cpt-rock {
